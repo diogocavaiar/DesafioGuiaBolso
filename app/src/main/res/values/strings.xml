@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DesafioGuiaBolso</string>
+    <string name="message_empty_categories">No momento não há Categorias disponíveis!</string>
+    <string name="message_empty_categorie_detail">Essa categoria não contém informações!</string>
+</resources>

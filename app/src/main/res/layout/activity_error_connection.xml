@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+    <ImageView
+            android:id="@+id/activity_categories_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/access_point_network_off"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="200dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+    <TextView
+            android:id="@+id/activity_categories_tvError"
+            android:text="TextView"
+            android:textSize="25dp"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            app:layout_constraintTop_toBottomOf="@+id/activity_categories_imageView"
+            android:visibility="gone"/>
+
+    <Button
+            android:text="Tentar Novamente"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_categories_btnRetry"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="64dp"
+            app:layout_constraintTop_toBottomOf="@+id/activity_categories_tvError"
+            android:visibility="gone"/>
+
+</merge>

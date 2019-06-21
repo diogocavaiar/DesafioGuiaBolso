@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "diogo.com.br.desafioguiabolson"
+        minSdkVersion 20
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
+
+    def dependencies = rootProject.ext.dependencies
+    def testDependencies = rootProject.ext.testDependecies
+
+    implementation dependencies.appCompact
+    implementation dependencies.constraintlayout
+    implementation dependencies.cardView
+    implementation dependencies.recyclerView
+    implementation dependencies.material
+
+    implementation dependencies.kotlin
+
+    implementation dependencies.ktx
+
+    implementation dependencies.viewModel
+    implementation dependencies.lifeCycle
+
+    implementation dependencies.rxJava
+    implementation dependencies.rxKotlin
+    implementation dependencies.rxAndroid
+
+    implementation dependencies.retrofit
+    implementation dependencies.retrofitRxAdapter
+    implementation dependencies.retrofitGsonConverter
+    implementation dependencies.gson
+
+    implementation dependencies.dagger2
+    implementation dependencies.dagger2_support
+    kapt dependencies.dagger2_processor
+    kapt dependencies.dagger2_compiler
+
+    implementation dependencies.circleImageView
+    implementation dependencies.glide
+
+    testImplementation testDependencies.junit
+    androidTestImplementation testDependencies.runner
+    androidTestImplementation testDependencies.espresso
+
+
+}
